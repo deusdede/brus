@@ -19,24 +19,6 @@ namespace FluentProject
 
             persistencia.ListarUsuarios();
             persistencia.ListarTarefas();
-
-            //using (var session = fabrica.OpenSession())
-            //{
-            //    var usuarios = session.QueryOver<Usuario>().List();
-
-            //    foreach (var usuario in usuarios)
-            //    {
-            //        Console.WriteLine(usuario.Nome);
-            //    }
-
-            //    var tarefas = session.QueryOver<Tarefa>().List();
-
-            //    foreach (var tarefa in tarefas)
-            //    {
-            //        Console.WriteLine($"{tarefa.Descricao} {tarefa.DataAgendamento}");
-            //    }
-            //}
-
             Console.WriteLine("Fim...");
 
             Console.ReadLine();
