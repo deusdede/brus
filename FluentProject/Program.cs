@@ -17,17 +17,22 @@ namespace FluentProject
 
             var fabrica = persistencia.CreateSessionFactory();
 
-            persistencia.ListarUsuarios();
-            persistencia.ListarTarefas();
-
             Usuario usuario = persistencia.getUsuario(1);
 
-            var tarefa = new Tarefa();
-            tarefa.Descricao = "Incluir registros na base usando Fluent";
-            tarefa.DataAgendamento = DateTime.Now;
-            tarefa.Usuario = usuario;
+            var incluir = false;
 
-            persistencia.IncluirTarefa(tarefa);
+            if (incluir) {
+                var tarefa = new Tarefa();
+                tarefa.Descricao = "Enviar artefatos para o André";
+                tarefa.DataAgendamento = DateTime.Parse("2020-03-20");
+                tarefa.Usuario = usuario;
+
+                persistencia.IncluirTarefa(tarefa);
+
+            }
+
+            persistencia.ListarUsuarios();
+            persistencia.ListarTarefas();
 
             Console.WriteLine("Fim...");
 
@@ -35,15 +40,6 @@ namespace FluentProject
 
         }
 
-        //private static ISessionFactory CreateSessionFactory()
-        //{
-        //    string stringConexao = ConfigurationManager.ConnectionStrings["brus"].ConnectionString;
-
-        //    return Fluently.Configure()
-        //            .Database(MsSqlConfiguration.MsSql2008.ConnectionString(stringConexao))
-        //            .Mappings(m => m.FluentMappings.AddFromAssemblyOf<Program>())
-        //            .BuildSessionFactory();
-        //}
     }
 }
 
