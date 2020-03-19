@@ -1,10 +1,6 @@
-﻿using FluentNHibernate.Cfg;
-using FluentNHibernate.Cfg.Db;
-using FluentProject.Persistencia;
+﻿using FluentProject.Persistencia;
 using Modelos;
-using NHibernate;
 using System;
-using System.Configuration;
 
 namespace FluentProject
 {

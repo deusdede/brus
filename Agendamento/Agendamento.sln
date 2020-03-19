@@ -27,7 +27,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Agendamento", ".", "{9316A6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseManager", "..\DatabaseManager\DatabaseManager.csproj", "{749692AA-A78B-4051-8F11-C324EF95F112}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentProject", "..\FluentProject\FluentProject.csproj", "{AED82A8D-7600-4A83-B431-0369357D0BD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentProject", "..\FluentProject\FluentProject.csproj", "{AED82A8D-7600-4A83-B431-0369357D0BD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistencia", "..\Persistencia\Persistencia.csproj", "{F476CF1E-70D6-463D-894D-76C505F09A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteWeb", "..\TesteWeb\TesteWeb.csproj", "{CF3151DC-EDAD-4618-A6A2-B2AFE6FC9D72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,14 @@ Global
 		{AED82A8D-7600-4A83-B431-0369357D0BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AED82A8D-7600-4A83-B431-0369357D0BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AED82A8D-7600-4A83-B431-0369357D0BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F476CF1E-70D6-463D-894D-76C505F09A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F476CF1E-70D6-463D-894D-76C505F09A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F476CF1E-70D6-463D-894D-76C505F09A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F476CF1E-70D6-463D-894D-76C505F09A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF3151DC-EDAD-4618-A6A2-B2AFE6FC9D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3151DC-EDAD-4618-A6A2-B2AFE6FC9D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3151DC-EDAD-4618-A6A2-B2AFE6FC9D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3151DC-EDAD-4618-A6A2-B2AFE6FC9D72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

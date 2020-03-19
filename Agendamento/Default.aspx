@@ -8,6 +8,7 @@
     <telerik:RadStyleSheetManager id="RadStyleSheetManager1" runat="server" />
 </head>
 <body>
+
     <form id="form1" runat="server">
     <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
         <Scripts>
@@ -22,7 +23,12 @@
     <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
     </telerik:RadAjaxManager>
     <div>
-        <telerik:RadScheduler ID="RadScheduler1" runat="server"></telerik:RadScheduler>
+        <telerik:RadScheduler ID="RadScheduler1" runat="server" Culture="pt-BR" OnAppointmentDelete="RadScheduler1_AppointmentDelete" OnAppointmentInsert="RadScheduler1_AppointmentInsert" OnAppointmentUpdate="RadScheduler1_AppointmentUpdate">
+<ExportSettings>
+<Pdf PageTopMargin="1in" PageBottomMargin="1in" PageLeftMargin="1in" PageRightMargin="1in"></Pdf>
+</ExportSettings>
+        </telerik:RadScheduler>
+        <asp:ObjectDataSource ID="DatasourceFluent" runat="server"></asp:ObjectDataSource>
     </div>
     </form>
 </body>
