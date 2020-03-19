@@ -19,6 +19,16 @@ namespace FluentProject
 
             persistencia.ListarUsuarios();
             persistencia.ListarTarefas();
+
+            Usuario usuario = persistencia.getUsuario(1);
+
+            var tarefa = new Tarefa();
+            tarefa.Descricao = "Incluir registros na base usando Fluent";
+            tarefa.DataAgendamento = DateTime.Now;
+            tarefa.Usuario = usuario;
+
+            persistencia.IncluirTarefa(tarefa);
+
             Console.WriteLine("Fim...");
 
             Console.ReadLine();

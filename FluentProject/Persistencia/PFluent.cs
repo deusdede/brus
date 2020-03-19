@@ -11,11 +11,11 @@ namespace FluentProject.Persistencia
 {
     public class PFluent
     {
-        private ISessionFactory secao;
+        private ISessionFactory fabrica;
 
         public PFluent()
         {
-            secao = CreateSessionFactory();
+            fabrica = CreateSessionFactory();
         }
         public ISessionFactory CreateSessionFactory()
         {
@@ -27,23 +27,40 @@ namespace FluentProject.Persistencia
                     .BuildSessionFactory();
         }
 
+        internal Usuario getUsuario(int id)
+        {
+            return fabrica.OpenSession().Get<Usuario>(id);
+        }
+
         internal void ListarUsuarios()
         {
-            var usuarios = secao.OpenSession().QueryOver<Usuario>().List();
+            var usuarios = fabrica.OpenSession().QueryOver<Usuario>().List();
 
             foreach (var usuario in usuarios)
             {
-                Console.WriteLine(usuario.Nome);
+                Console.WriteLine($"{usuario.Id} - {usuario.Nome}");
             }
 
         }
         internal void ListarTarefas()
         {
-            var tarefas = secao.OpenSession().QueryOver<Tarefa>().List();
+            var tarefas = fabrica.OpenSession().QueryOver<Tarefa>().List();
 
             foreach (var tarefa in tarefas)
             {
                 Console.WriteLine($"{tarefa.Descricao} {tarefa.DataAgendamento}");
+            }
+        }
+
+        internal void IncluirTarefa(Tarefa tarefa)
+        {
+            using (var sessao = fabrica.OpenSession())
+            {
+                using (var transaction = sessao.BeginTransaction())
+                {
+                    sessao.SaveOrUpdate(tarefa);
+                    transaction.Commit();
+                }
             }
         }
     }
