@@ -14,7 +14,9 @@
         <div>
             <telerik:RadScriptManager runat="server" ID="RadScriptManager1" />
 
-            <telerik:RadScheduler ID="RadScheduler1" runat="server" DataEndField="End" DataKeyField="ID" DataStartField="Start" DataSubjectField="Subject"></telerik:RadScheduler>
+            <telerik:RadScheduler ID="RadScheduler1" runat="server" DataEndField="End" DataKeyField="ID" DataStartField="Start" DataSubjectField="Subject" Culture="pt-BR" DataSourceID="ObjectDataSource1"></telerik:RadScheduler>
+
+            <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="ListarTarefas" TypeName="Persistencia.PFluent"></asp:ObjectDataSource>
 
         </div>
     </form>

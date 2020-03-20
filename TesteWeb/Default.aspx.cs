@@ -40,7 +40,7 @@ namespace TesteWeb
                 InitializeAppointments();
             }
 
-            RadScheduler1.DataSource = Appointments;
+            //RadScheduler1.DataSource = Appointments;
         }
 
         protected void RadScheduler1_AppointmentInsert(object sender, SchedulerCancelEventArgs e)

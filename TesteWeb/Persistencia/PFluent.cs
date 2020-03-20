@@ -27,12 +27,12 @@ namespace Persistencia
                     .BuildSessionFactory();
         }
 
-        internal Usuario getUsuario(int id)
+        public Usuario getUsuario(int id)
         {
             return fabrica.OpenSession().Get<Usuario>(id);
         }
 
-        internal void ListarUsuarios()
+        public void ListarUsuarios()
         {
             var usuarios = fabrica.OpenSession().QueryOver<Usuario>().List();
 
@@ -42,13 +42,13 @@ namespace Persistencia
             }
 
         }
-        internal IList<Tarefa> ListarTarefas()
+        public IList<Tarefa> ListarTarefas()
         {
             return fabrica.OpenSession().QueryOver<Tarefa>().List();
 
         }
 
-        internal void IncluirTarefa(Tarefa tarefa)
+        public void IncluirTarefa(Tarefa tarefa)
         {
             using (var sessao = fabrica.OpenSession())
             {
