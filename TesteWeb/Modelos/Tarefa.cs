@@ -13,5 +13,7 @@ namespace Modelos
         public virtual DateTime? Start { get; set; }
         public virtual DateTime? End { get; set; }
         public virtual int UserID { get; set; }
+        public virtual string RecurrenceRule { get; set; }
+        public virtual int RecurrenceParentID { get; set; }
     }
 }

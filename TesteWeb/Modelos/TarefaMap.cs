@@ -16,6 +16,8 @@ namespace Modelo {
             Map(x => x.Subject).Column("descricao");
             Map(x => x.Start).Column("inicio_agendamento");
             Map(x => x.End).Column("fim_agendamento");
+            Map(x => x.RecurrenceRule);
+            Map(x => x.RecurrenceParentID);
             Map(x => x.UserID).Column("usuario_id");
             Table("Tarefa");
         }
