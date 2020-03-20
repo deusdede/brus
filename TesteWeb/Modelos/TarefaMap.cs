@@ -17,7 +17,6 @@ namespace Modelo {
             Map(x => x.Start).Column("inicio_agendamento");
             Map(x => x.End).Column("fim_agendamento");
             Map(x => x.UserID).Column("usuario_id");
-            References(c => c.Usuario).Column("usuario_id");
             Table("Tarefa");
         }
     }

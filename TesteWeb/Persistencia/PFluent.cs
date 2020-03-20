@@ -48,17 +48,33 @@ namespace Persistencia
 
         }
 
-        public void IncluirTarefa(Tarefa tarefa)
+        public void SalvarTarefa(Tarefa tarefa)
         {
             using (var sessao = fabrica.OpenSession())
             {
                 using (var transaction = sessao.BeginTransaction())
                 {
+                    if (tarefa.UserID == 0 )
+                    {
+                        tarefa.UserID = 1;
+                    }
                     sessao.SaveOrUpdate(tarefa);
                     transaction.Commit();
                 }
             }
         }
+
+        public void ExcluirrTarefa(Tarefa tarefa)
+        {
+            using (var sessao = fabrica.OpenSession())
+            {
+                using (var transaction = sessao.BeginTransaction())
+                {
+                    sessao.Delete(tarefa);
+                    transaction.Commit();
+                }
+            }
+        }
     }
-   
+
 }
